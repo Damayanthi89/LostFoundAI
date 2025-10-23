@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head><title>Report Lost Item</title>
+  <style>
+  body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;  /* centers horizontally */
+  align-items: center;      /* centers vertically */
+  background-color: #cfeeff; /* your background color */
+}
+
+.lform {
+  background: white;
+  padding: 30px 50px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  text-align: center;
+}
+  </style>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<form method="post" enctype="multipart/form-data" name="lform">
+  <h2>Report Lost Item</h2>
+  Name: <input name="name"><br>
+  Description: <input name="description"><br>
+  Location: <input name="location"><br>
+  Contact: <input name="contact"><br>
+  Image: <input type="file" name="image"><br>
+  <button type="submit">Submit</button>
+
+<p><a href="{{ url_for('dashboard') }}">← Back to Dashboard</a></p>
+
+<a href="/">Home</a>
+</form>
+</body>
+</html>

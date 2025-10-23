@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head><title>Report Found Item</title>
+  <style>
+  body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;  /* centers horizontally */
+  align-items: center;      /* centers vertically */
+  background-color: #cfeeff; /* your background color */
+}
+  </style>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<form method="post" enctype="multipart/form-data">
+  <h2>Report Found Item</h2>
+  Name: <input name="name"><br>
+  Description: <input name="description"><br>
+  Location: <input name="location"><br>
+  Contact: <input name="contact"><br>
+  Image: <input type="file" name="image"><br>
+  <button type="submit">Upload & Search Matches</button>
+<p><a href="{{ url_for('dashboard') }}">← Back to Dashboard</a></p>
+<a href="/">Home</a>
+</form>
+</body>
+</html>
